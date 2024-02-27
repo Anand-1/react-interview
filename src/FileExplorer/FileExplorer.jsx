@@ -14,9 +14,11 @@ const FileExplorer = () => {
   };
 
   return (
-    <div className="App">
-      <Folder handleInsertNode={handleInsertNode} explorer={explorerData} />
-    </div>
+    <>
+      <div className="App">
+        <Folder handleInsertNode={handleInsertNode} explorer={explorerData} />
+      </div>
+    </>
   );
 };
 

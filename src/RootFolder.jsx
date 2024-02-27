@@ -2,27 +2,29 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const RootFolder = () => {
+  const links = [
+    { name: "progress", value: "progressbar" },
+    { name: "dropdowns", value: "dropdowns" },
+    { name: "checkboxes", value: "checkboxes" },
+    { name: "radiogames", value: "radiogames" },
+    { name: "fileexplorer", value: "fileexplorer" },
+    { name: "pagination", value: "pagination" },
+    { name: "infinitescroll", value: "infinitescroll" },
+    { name: "steppers", value: "steppers" },
+    { name: "multiselect", value: "multiselect" },
+    { name: "gridlights", value: "gridlights" },
+    { name: "passwordgenerator", value: "passwordgenerator" },
+  ];
   return (
     <div>
-      <Link to="/progressbar">Progress</Link>
-      <hr></hr>
-      <Link to="/dropdowns">dropdowns</Link>
-      <hr></hr>
-      <Link to="/checkboxes">checkboxes</Link>
-      <hr></hr>
-      <Link to="/radiogames">radiogames</Link>
-      <hr></hr>
-      <Link to="/fileexplorer">fileexplorer</Link>
-      <hr></hr>
-      <Link to="/pagination">pagination</Link>
-      <hr></hr>
-      <Link to="/infinitescroll">infinitescroll</Link>
-      <hr></hr>
-      <Link to="/progressbar">Progress</Link>
-      <hr></hr>
-      <Link to="/steppers">steppers</Link>
-      <hr></hr>
-      <Link to="multiselect">multiselect</Link>
+      <h1>Content Page </h1>
+      {links.map((item, index) => {
+        return (
+          <span key={index}>
+            <Link to={item.value}>{item.name} | </Link>
+          </span>
+        );
+      })}
     </div>
   );
 };

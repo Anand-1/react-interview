@@ -1,10 +1,9 @@
-/* eslint-disable react/prop-types */
-
 import { useEffect, useRef, useState } from "react";
 
 const CheckoutStepper = ({ stepsConfig = [] }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isComplete, setIsComplete] = useState(false);
+  const [isActive, setActive] = useState(false);
   const [margins, setMargins] = useState({
     marginLeft: 0,
     marginRight: 0,

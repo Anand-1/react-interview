@@ -10,6 +10,9 @@ import ProgressBar from "./ProgressBar/ProgressBar";
 import RootFolder from "./RootFolder";
 import Stepper from "./Stepper/Stepper";
 import MultiSelectinput from "./MuiltiSelectInput/MultiSelectinput";
+import GridLights from "./GridLights/GridLights";
+import PasswordGenerator from "./PasswordGenerator/PasswordGenerator";
+import Login from "./LoginApp/Login";
 function App() {
   return (
     <div className="App">
@@ -25,6 +28,12 @@ function App() {
           <Route path="progressbar" element={<ProgressBar />}></Route>
           <Route path="steppers" element={<Stepper />}></Route>
           <Route path="multiselect" element={<MultiSelectinput />}></Route>
+          <Route path="gridlights" element={<GridLights />}></Route>
+          <Route
+            path="passwordgenerator"
+            element={<PasswordGenerator />}
+          ></Route>
+          <Route path="login" element={<Login />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

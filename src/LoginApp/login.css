@@ -1,0 +1,17 @@
+.container {
+  text-align: center;
+  border: 2px solid gray;
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+.login-element-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.button-section {
+  margin: 10px;
+  padding: 10px 40px;
+}
