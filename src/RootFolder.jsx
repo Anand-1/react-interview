@@ -14,6 +14,8 @@ const RootFolder = () => {
     { name: "multiselect", value: "multiselect" },
     { name: "gridlights", value: "gridlights" },
     { name: "passwordgenerator", value: "passwordgenerator" },
+    { name: "login", value: "login" },
+    { name: "otp", value: "otp" },
   ];
   return (
     <div>

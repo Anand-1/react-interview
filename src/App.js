@@ -13,6 +13,7 @@ import MultiSelectinput from "./MuiltiSelectInput/MultiSelectinput";
 import GridLights from "./GridLights/GridLights";
 import PasswordGenerator from "./PasswordGenerator/PasswordGenerator";
 import Login from "./LoginApp/Login";
+import Otp from "./Otp/Otp";
 function App() {
   return (
     <div className="App">
@@ -34,6 +35,7 @@ function App() {
             element={<PasswordGenerator />}
           ></Route>
           <Route path="login" element={<Login />}></Route>
+          <Route path="otp" element={<Otp />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
