@@ -1,6 +1,7 @@
 import React from "react";
 import CheckoutStepper from "./CheckoutStepper";
 import "./stepper.css";
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 
 const CHECKOUT_STEPS = [
   {
@@ -24,7 +25,7 @@ const CHECKOUT_STEPS = [
 const Stepper = () => {
   return (
     <div>
-      <h1>Stepper Component</h1>
+      <SectionHeader data={"Stepper Component"} />
       <CheckoutStepper stepsConfig={CHECKOUT_STEPS} />
     </div>
   );

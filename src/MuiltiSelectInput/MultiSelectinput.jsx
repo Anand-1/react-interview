@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Pill from "./Pills";
 import "./multiselect.css";
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 
 const MultiSelectinput = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -79,7 +80,7 @@ const MultiSelectinput = () => {
 
   return (
     <div className="user-search-container">
-      <h1>Multi Select </h1>
+      <SectionHeader data={"Multi Select "} />
       <div className="user-search-input">
         {/* Pills */}
         {selectedUsers.map((user) => {

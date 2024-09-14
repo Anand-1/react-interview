@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./styles.css";
 import ContentPage from "./ContentPage";
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 
 const InfiniteScroll = () => {
   const [data, setData] = useState([]);
@@ -40,9 +41,7 @@ const InfiniteScroll = () => {
   return (
     <>
       <div className="main-section">
-        <div>
-          <h1>Infinite Scroll</h1>
-        </div>
+        <SectionHeader data={"Infinite Scroll"} />
         <ContentPage getData={getData} data={data} />
       </div>
     </>

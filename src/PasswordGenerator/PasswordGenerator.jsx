@@ -6,6 +6,7 @@ import Button from "./Button";
 
 import usePasswordGenerator from "./password-generator";
 import PasswordStrengthIndicator from "./strengthchecker";
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 
 const PasswordGenerator = () => {
   const [length, setLength] = useState(Number);
@@ -35,6 +36,7 @@ const PasswordGenerator = () => {
   const { password, errorMessage, generatePassword } = usePasswordGenerator();
   return (
     <>
+      <SectionHeader data={"Get your Password !"} />
       <div className="generator-section">
         <div className="password-box">Password Generator</div>
         <div className="header">

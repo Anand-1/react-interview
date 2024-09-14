@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 const ProgressBar = () => {
   const [progresData, setProgress] = useState(0);
 
@@ -17,7 +18,7 @@ const ProgressBar = () => {
   console.log(progresData);
   return (
     <>
-      <h1>Progress Bar</h1>
+      <SectionHeader data={"Progress Bar"} />
       <div className="progress-container">
         <div className="progress-barr">
           <div

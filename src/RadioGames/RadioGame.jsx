@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 
 const games = ["Football", "Cricket", "Volley Ball", "Tennis"];
 
@@ -10,7 +11,7 @@ const RadioGames = () => {
   const [selectedGame, setGame] = useState("");
   return (
     <>
-      <div>Radio Games</div>
+      <SectionHeader data={"Radio Game"} />
       {data.map((item, index) => {
         return (
           <>

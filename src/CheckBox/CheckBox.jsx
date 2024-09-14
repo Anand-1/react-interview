@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./checkbox.css";
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 const arr = ["Item 1", "Item 2", "Item 3", "Item 4"];
 
 const CheckBox = () => {
@@ -14,6 +15,7 @@ const CheckBox = () => {
   };
   return (
     <>
+      <SectionHeader data={"Check Box"} />
       <ul className="unonderlist">
         {data.map((el, index) => {
           return (

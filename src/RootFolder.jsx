@@ -16,6 +16,7 @@ const RootFolder = () => {
     { name: "passwordgenerator", value: "passwordgenerator" },
     { name: "login", value: "login" },
     { name: "otp", value: "otp" },
+    { name: "lineGraph", value: "lineGraph" },
   ];
   return (
     <div>

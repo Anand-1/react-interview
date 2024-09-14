@@ -1,0 +1,12 @@
+.container-box {
+  margin: 20%;
+  padding: 20px;
+  background-color: lightcyan;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 2px solid grey;
+}
+
+.container-box > span {
+  padding: 10px;
+}

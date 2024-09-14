@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 //https://www.youtube.com/watch?v=cBsB7hhOzQI
 const Pagination = () => {
   const [data, setData] = useState("");
@@ -15,7 +16,7 @@ const Pagination = () => {
   };
   return (
     <>
-      <h1>Pagination Page</h1>
+      <SectionHeader data={"Pagination Page"} />
       <div style={{ margin: 50 }}>
         {data &&
           data.slice(page * 10 - 10, page * 10).map((item) => {

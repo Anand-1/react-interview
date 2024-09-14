@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import stateData from "./data";
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 
 const DropDown = () => {
   const [localdata, setLocalData] = useState("");
@@ -14,7 +15,7 @@ const DropDown = () => {
   };
   return (
     <>
-      <h1>Multi DropDown </h1>
+      <SectionHeader data={"Multi DropDown"} />
       <select
         onChange={(e) => {
           updateState(e.target.value);

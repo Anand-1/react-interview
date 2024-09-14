@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./login.css";
 import { login } from "./utils";
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -27,7 +28,7 @@ const Login = () => {
   return (
     <>
       <div className="container">
-        <h1>Login Page</h1>
+        <SectionHeader data={"Login Page"} />
         <div style={{ width: 300 }}>
           <div className="login-element-section">
             <div>User Name</div>

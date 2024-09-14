@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "./otp.css";
 import OtpInput from "./OtpInput";
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 const Otp = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [otpInput, setOtpInput] = useState(false);
@@ -23,7 +24,7 @@ const Otp = () => {
   };
   return (
     <div className="container">
-      <h1>OTP Box</h1>
+      <SectionHeader data={"OTP Box"} />
       {!otpInput ? (
         <form onSubmit={handlePhoneSubmit}>
           <input type="text" value={phoneNumber} onChange={handlePhoneNumber} />

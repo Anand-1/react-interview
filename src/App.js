@@ -14,6 +14,8 @@ import GridLights from "./GridLights/GridLights";
 import PasswordGenerator from "./PasswordGenerator/PasswordGenerator";
 import Login from "./LoginApp/Login";
 import Otp from "./Otp/Otp";
+import Portal from "./EmployeePortal/Portal";
+import LineGraph from "./GraphGames/LineGraphs/LineGraph";
 function App() {
   return (
     <div className="App">
@@ -36,6 +38,8 @@ function App() {
           ></Route>
           <Route path="login" element={<Login />}></Route>
           <Route path="otp" element={<Otp />}></Route>
+          <Route path="employeeportal" element={<Portal />}></Route>
+          <Route path="lineGraph" element={<LineGraph />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,3 +1,4 @@
+import SectionHeader from "../Common/SectionHeader/SectionHeader";
 import "./gridlights.css";
 import { useState } from "react";
 
@@ -51,7 +52,7 @@ export default function App() {
 
   return (
     <div className="wrapper">
-      <h1>Grid Lights</h1>
+      <SectionHeader data={"Grid Lights"} />
       <div
         className="grid"
         style={{
