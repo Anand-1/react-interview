@@ -1,0 +1,8 @@
+.buttonDesign {
+  padding: 20px;
+  margin: 30px;
+  border-radius: 10%;
+  color: white;
+  font-size: large;
+  cursor: pointer;
+}

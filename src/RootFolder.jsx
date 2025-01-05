@@ -1,33 +1,63 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import ButtonComponent from "./Common/Button/Button";
+import SectionHeader from "./Common/SectionHeader/SectionHeader";
+import { useNavigate } from "react-router-dom";
 
 const RootFolder = () => {
+  const navigate = useNavigate();
   const links = [
-    { name: "progress", value: "progressbar" },
-    { name: "dropdowns", value: "dropdowns" },
-    { name: "checkboxes", value: "checkboxes" },
-    { name: "radiogames", value: "radiogames" },
-    { name: "fileexplorer", value: "fileexplorer" },
-    { name: "pagination", value: "pagination" },
-    { name: "infinitescroll", value: "infinitescroll" },
-    { name: "steppers", value: "steppers" },
-    { name: "multiselect", value: "multiselect" },
-    { name: "gridlights", value: "gridlights" },
-    { name: "passwordgenerator", value: "passwordgenerator" },
-    { name: "login", value: "login" },
-    { name: "otp", value: "otp" },
-    { name: "lineGraph", value: "lineGraph" },
+    { name: "Progress Bar", value: "progressbar" },
+    { name: "Drop Down", value: "dropdowns" },
+    { name: "Check Box", value: "checkboxes" },
+    { name: "Radio Games", value: "radiogames" },
+    { name: "File Explorer", value: "fileexplorer" },
+    { name: "Pagination", value: "pagination" },
+    { name: "Infinite Scroll", value: "infinitescroll" },
+    { name: "Steppers", value: "steppers" },
+    { name: "Multi Select", value: "multiselect" },
+    { name: "Grid Lights", value: "gridlights" },
+    { name: "Password Generator", value: "passwordgenerator" },
+    { name: "Login", value: "login" },
+    { name: "OTP", value: "otp" },
+    { name: "Line Graph", value: "lineGraph" },
+  ];
+  const conceptualLinks = [
+    { name: "Render Props", value: "renderProps" },
+    { name: "Render Props", value: "renderProps" },
+    { name: "Render Props", value: "renderProps" },
   ];
   return (
     <div>
-      <h1>Content Page </h1>
+      <SectionHeader data={"Content Page"}> </SectionHeader>
       {links.map((item, index) => {
         return (
-          <span key={index}>
-            <Link to={item.value}>{item.name} | </Link>
-          </span>
+          <ButtonComponent
+            key={index}
+            label={item.name}
+            onClick={() => navigate(item.value)}
+            color="blueviolet"
+          ></ButtonComponent>
         );
       })}
+      <hr></hr>
+      <h2>Conceptual Ideas</h2>
+      {conceptualLinks.map((item, index) => {
+        return (
+          <ButtonComponent
+            key={index}
+            label={item.name}
+            onClick={() => navigate(item.value)}
+            color="blueviolet"
+          ></ButtonComponent>
+        );
+      })}
+      {/* <h2>Conceptual Ideas</h2>
+      <ul>
+        <li>1.</li>
+        <li>2.</li>
+        <li>3.</li>
+        <li>4.</li>
+      </ul> */}
     </div>
   );
 };

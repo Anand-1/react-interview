@@ -16,6 +16,7 @@ import Login from "./LoginApp/Login";
 import Otp from "./Otp/Otp";
 import Portal from "./EmployeePortal/Portal";
 import LineGraph from "./GraphGames/LineGraphs/LineGraph";
+import RenderProps from "./ConceptualFolder/RenderProps/RenderProps";
 function App() {
   return (
     <div className="App">
@@ -40,6 +41,7 @@ function App() {
           <Route path="otp" element={<Otp />}></Route>
           <Route path="employeeportal" element={<Portal />}></Route>
           <Route path="lineGraph" element={<LineGraph />}></Route>
+          <Route path="renderProps" element={<RenderProps />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
