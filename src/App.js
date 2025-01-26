@@ -17,6 +17,8 @@ import Otp from "./Otp/Otp";
 import Portal from "./EmployeePortal/Portal";
 import LineGraph from "./GraphGames/LineGraphs/LineGraph";
 import RenderProps from "./ConceptualFolder/RenderProps/RenderProps";
+import TodoList from "./ConceptualFolder/TodoList/TodoList";
+import MouseTracker from "./ConceptualFolder/MouseRender/MouseTracker";
 function App() {
   return (
     <div className="App">
@@ -42,6 +44,19 @@ function App() {
           <Route path="employeeportal" element={<Portal />}></Route>
           <Route path="lineGraph" element={<LineGraph />}></Route>
           <Route path="renderProps" element={<RenderProps />}></Route>
+          <Route path="todoList" element={<TodoList />}></Route>
+          <Route
+            path="mouseTracker"
+            element={
+              <MouseTracker
+                render={({ x, y }) => (
+                  <h1>
+                    The mouse position is ({x}, {y})
+                  </h1>
+                )}
+              />
+            }
+          ></Route>
         </Routes>
       </BrowserRouter>
     </div>

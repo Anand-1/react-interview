@@ -8,7 +8,7 @@ export default function Products() {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        const response = await fetch("https://dummyjson.com/products?limit=5");
+        const response = await fetch("https://dummyjson.com/products");
         const products = await response.json();
         setProducts(products);
       } catch (err) {
@@ -26,17 +26,19 @@ export default function Products() {
     <>
       <div>
         <h2>Products</h2>
-        {products.products.map((product) => {
-          return (
-            <div>
-              <img src={product.thumbnail} alt="" />
-              <div>
-                <h2>{product.title}</h2>
-                <p>{product.discription}</p>
+        <div>
+          {products?.products?.map((product) => {
+            return (
+              <div style={{ width: "fit-content" }}>
+                <img src={product.thumbnail} alt="" />
+                <div>
+                  <h2>{product.title}</h2>
+                  <p>{product.discription}</p>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </>
   );

@@ -23,8 +23,8 @@ const RootFolder = () => {
   ];
   const conceptualLinks = [
     { name: "Render Props", value: "renderProps" },
-    { name: "Render Props", value: "renderProps" },
-    { name: "Render Props", value: "renderProps" },
+    { name: "Todo List with HOC", value: "todoList" },
+    { name: "mouseTracker", value: "mouseTracker" },
   ];
   return (
     <div>
