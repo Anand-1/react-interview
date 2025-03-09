@@ -9,6 +9,9 @@ const InfiniteScroll = () => {
   let limitNumber = useRef(30);
 
   const getData = useCallback(() => {
+    console.log("scrollheigt" + document.documentElement.scrollHeight);
+    console.log("Innerheight " + window.innerHeight);
+    console.log("scrolltop" + document.documentElement.scrollTop);
     return new Promise((res, rej) => {
       fetch(
         "https://jsonplaceholder.typicode.com/posts?" +
@@ -19,12 +22,9 @@ const InfiniteScroll = () => {
           setData((prevData) => [...prevData, ...data]);
         });
     });
-  }, []);
+  }, [pageNumber]);
 
   const handleInfiniteScroll = async () => {
-    // console.log("scrollheigt" + document.documentElement.scrollHeight);
-    // console.log("Innerheight " + window.innerHeight);
-    // console.log("scrolltop" + document.documentElement.scrollTop);
     if (
       window.innerHeight + document.documentElement.scrollTop + 10 >
       document.documentElement.scrollHeight
@@ -36,7 +36,7 @@ const InfiniteScroll = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleInfiniteScroll);
-  }, []);
+  }, [handleInfiniteScroll]);
 
   return (
     <>

@@ -51,7 +51,7 @@ export default function App() {
   };
 
   return (
-    <div className="wrapper">
+    <>
       <SectionHeader data={"Grid Lights"} />
       <div
         className="grid"
@@ -73,6 +73,6 @@ export default function App() {
           );
         })}
       </div>
-    </div>
+    </>
   );
 }

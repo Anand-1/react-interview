@@ -1,4 +1,3 @@
-import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DropDown from "./DropDown/DropDown";
 import CheckBox from "./CheckBox/CheckBox";
@@ -19,6 +18,13 @@ import LineGraph from "./GraphGames/LineGraphs/LineGraph";
 import RenderProps from "./ConceptualFolder/RenderProps/RenderProps";
 import TodoList from "./ConceptualFolder/TodoList/TodoList";
 import MouseTracker from "./ConceptualFolder/MouseRender/MouseTracker";
+import Accordion from "./Accordion/Accordion";
+import SeatBooking from "./SeatBooking/SeatBooking";
+import StarRating from "./StarRating/StarRating";
+import Sheet from "./GoogleSheet/Sheet";
+import "./App.css";
+import EmployeeInfo from "./EmployeePortal/EmployeeInfo";
+
 function App() {
   return (
     <div className="App">
@@ -57,6 +63,11 @@ function App() {
               />
             }
           ></Route>
+          <Route path="accordion" element={<Accordion />}></Route>
+          <Route path="seatBooking" element={<SeatBooking />}></Route>
+          <Route path="starrating" element={<StarRating />}></Route>
+          <Route path="googleSheets" element={<Sheet />}></Route>
+          <Route path="employeePortal" element={<EmployeeInfo />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

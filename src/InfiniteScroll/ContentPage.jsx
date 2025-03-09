@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const ContentPage = (props) => {
   const { getData, data } = props;
@@ -15,7 +15,7 @@ const ContentPage = (props) => {
       <h3>Items Page</h3>
       {data &&
         data.map((Item) => {
-          return <div key={Item.id}>{Item.title}</div>;
+          return <div>{Item.title}</div>;
         })}
     </>
   );

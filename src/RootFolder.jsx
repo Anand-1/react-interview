@@ -20,6 +20,11 @@ const RootFolder = () => {
     { name: "Login", value: "login" },
     { name: "OTP", value: "otp" },
     { name: "Line Graph", value: "lineGraph" },
+    { name: "Accordion", value: "accordion" },
+    { name: "Seat Booking", value: "seatBooking" },
+    { name: "Star Rating", value: "starrating" },
+    { name: "Google Steets", value: "googleSheets" },
+    { name: "Employee Portal", value: "employeePortal" },
   ];
   const conceptualLinks = [
     { name: "Render Props", value: "renderProps" },
@@ -29,16 +34,18 @@ const RootFolder = () => {
   return (
     <div>
       <SectionHeader data={"Content Page"}> </SectionHeader>
-      {links.map((item, index) => {
-        return (
-          <ButtonComponent
-            key={index}
-            label={item.name}
-            onClick={() => navigate(item.value)}
-            color="blueviolet"
-          ></ButtonComponent>
-        );
-      })}
+      {links
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map((item, index) => {
+          return (
+            <ButtonComponent
+              key={index}
+              label={item.name}
+              onClick={() => navigate(item.value)}
+              color="blueviolet"
+            ></ButtonComponent>
+          );
+        })}
       <hr></hr>
       <h2>Conceptual Ideas</h2>
       {conceptualLinks.map((item, index) => {
