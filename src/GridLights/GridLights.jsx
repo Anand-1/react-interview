@@ -1,19 +1,7 @@
 import SectionHeader from "../Common/SectionHeader/SectionHeader";
 import "./gridlights.css";
 import { useState } from "react";
-
-function Cell({ filled, onClick, isDisabled, label }) {
-  return (
-    <button
-      type="button"
-      aria-label={label}
-      disabled={isDisabled}
-      onClick={onClick}
-      className={filled ? "cell cell-activated" : "cell"}
-    />
-  );
-}
-
+import Cells from "./Cells";
 export default function App() {
   const [order, setOrder] = useState([]);
   const [isDeactivating, setIsDeactivating] = useState(false);
@@ -61,7 +49,7 @@ export default function App() {
       >
         {config.flat(1).map((value, index) => {
           return value ? (
-            <Cell
+            <Cells
               key={index}
               label={`Cell ${index}`}
               filled={order.includes(index)}
