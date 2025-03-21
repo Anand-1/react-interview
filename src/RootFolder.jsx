@@ -30,6 +30,7 @@ const RootFolder = () => {
     { name: "Render Props", value: "renderProps" },
     { name: "Todo List with HOC", value: "todoList" },
     { name: "mouseTracker", value: "mouseTracker" },
+    { name: "test", value: "test" },
   ];
   return (
     <div>

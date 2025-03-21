@@ -24,6 +24,7 @@ import StarRating from "./StarRating/StarRating";
 import Sheet from "./GoogleSheet/Sheet";
 import "./App.css";
 import EmployeeInfo from "./EmployeePortal/EmployeeInfo";
+import Test from "./Test/test";
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
           <Route path="starrating" element={<StarRating />}></Route>
           <Route path="googleSheets" element={<Sheet />}></Route>
           <Route path="employeePortal" element={<EmployeeInfo />}></Route>
+          <Route path="test" element={<Test />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
