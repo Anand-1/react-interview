@@ -1,64 +1,37 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import SectionHeader from "../Common/SectionHeader/SectionHeader";
+import React, { useState } from "react";
 const Test = () => {
-  const [posts, setPosts] = useState([]);
-  const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(false);
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState([]);
 
-  useEffect(() => {
-    loadMorePosts(page, 10);
-  }, [page]);
-  const observer = useRef();
-  const lastPostElementRef = useCallback(
-    (node) => {
-      if (loading) return;
-      if (observer.current) observer.current.disconnect();
-      observer.current = new IntersectionObserver((entries) => {
-        console.log(entries);
-        if (entries[0].isIntersecting) {
-          setPage((prevPage) => prevPage + 1); // trigger loading of new posts by chaging page no
-        }
-      });
-
-      if (node) observer.current.observe(node);
-    },
-    [loading]
-  );
-  const fetchPosts = async (page, limit) => {
-    const response = await fetch(
-      `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${limit}`
-    );
-    const data = await response.json();
-    return data;
+  const increment = () => {
+    setCount((c) => c + 1);
   };
-  const loadMorePosts = async () => {
-    setLoading(true);
-    const newPosts = await fetchPosts(page, 10);
-    setPosts((prevPosts) => [...prevPosts, ...newPosts]);
-    setLoading(false);
+  const addTodo = () => {
+    setTodos((t) => [...t, "New Todo"]);
   };
 
-  useEffect(() => {
-    loadMorePosts();
-  }, [page]);
   return (
-    <div>
-      <SectionHeader data={"Test"} />
-      <div>Test</div>
+    <>
+      <Todos todos={todos} addTodo={addTodo} />
+      <hr />
       <div>
-        {posts.map((item, index) => {
-          return (
-            <div
-              key={index}
-              ref={posts.length === index + 1 ? lastPostElementRef : null}
-            >
-              {item.title}
-            </div>
-          );
-        })}
+        Count: {count}
+        <button onClick={increment}>+</button>
       </div>
-    </div>
+    </>
   );
 };
 
+const Todos = ({ todos, addTodo }) => {
+  console.log("child render");
+  return (
+    <>
+      <h2>My Todos</h2>
+      {todos.map((todo, index) => {
+        return <p key={index}>{todo}</p>;
+      })}
+      <button onClick={addTodo}>Add Todo</button>
+    </>
+  );
+};
 export default Test;
